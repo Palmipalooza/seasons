@@ -6,7 +6,10 @@ class App extends React.Component {
     super(props);
 
     this.state = { lat: null, errorMessage: '' };
+  }
 
+  componentDidMount() {
+    console.log('my component has been rendered to the screen');
     window.navigator.geolocation.getCurrentPosition(
       position => {
         this.setState({ lat: position.coords.latitude });
@@ -15,6 +18,14 @@ class App extends React.Component {
         this.setState({ errorMessage: err.message });
       }
     );
+  }
+
+  componentDidUpdate() {
+    console.log('my component has been updated and rerendered');
+  }
+
+  componentWillUnmount() {
+    console.log('my component has been removed, doing some cleanup');
   }
 
   render() {
