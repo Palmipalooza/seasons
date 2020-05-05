@@ -1,4 +1,8 @@
+Simple app that shows the season based on user's geolocation
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Styling with Semantic UI - https://semantic-ui.com/
 
 ## Available Scripts
 
